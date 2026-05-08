@@ -2,6 +2,7 @@ import random
 import re
 import os 
 import asyncio
+import time
 from google import genai
 from telegram import Bot, Poll
 from dotenv import load_dotenv
@@ -13,7 +14,7 @@ load_dotenv()
 
 # ====== Google GenAI client ======
 google_token = os.getenv("GOOGLE_TOKEN")
-client = genai.Client(api_key=google_token)
+
 
 # ====== Telegram bot setup ======
 
@@ -33,8 +34,9 @@ chat_listt = [chat_id_mcq ,chat_id_monk]
 
 # ====== Main loop ======
 async def main():
+    client = genai.Client(api_key=google_token)
     i = 0
-    while i<5:
+    while True:
         try:
             topic = random.choice(topics)
             prompt = f"""
@@ -90,9 +92,9 @@ Do NOT include explanations, extra text, or numbering.
         except Exception as e:
             print(f"Error posting MCQ {i+1}: {e}")
 
-        print("pause : 30s")
+        print("pause : 120s")
 
-        await asyncio.sleep(30)
+        await asyncio.sleep(120)
 
 
 if __name__ == "__main__":
