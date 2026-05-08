@@ -13,7 +13,7 @@ load_dotenv()
 
 # ====== Google GenAI client ======
 google_token = os.getenv("GOOGLE_TOKEN")
-client = genai.Client(api_key="AIzaSyB6qn8CCqFNAovwJb3lo5D2C9RQm2hviv4")
+client = genai.Client(api_key=google_token)
 
 # ====== Telegram bot setup ======
 
