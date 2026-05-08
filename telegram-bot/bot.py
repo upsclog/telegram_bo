@@ -19,7 +19,7 @@ google_token = os.getenv("GOOGLE_TOKEN")
 # ====== Telegram bot setup ======
 
 
-TOKEN = os.getenv("BOT_TOKEN")
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 bot = Bot(token=BOT_TOKEN)
 
 # ====== Read topics from file ======
