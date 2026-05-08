@@ -12,6 +12,7 @@ load_dotenv()
 
 
 
+
 # ====== Google GenAI client ======
 google_token = os.getenv("GOOGLE_TOKEN")
 
