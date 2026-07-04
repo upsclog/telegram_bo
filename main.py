@@ -13,7 +13,8 @@ load_dotenv()
 
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
-print("GEMINI_API_KEY =", GEMINI_API_KEY)
+print("Environment keys:", list(os.environ.keys()))
+print("GEMINI_API_KEY =", os.environ.get("GEMINI_API_KEY"))
 CHAT_IDS = [
     "@upsclog",
     "@upsc_daily_pyq"
