@@ -1,3 +1,7 @@
 python-telegram-bot
 python-dotenv
 google-genai
+requests
+time 
+random
+re
