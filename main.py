@@ -37,7 +37,7 @@ Rules:
   economy, environment, science & technology, governance,
   international relations, committees, reports, Acts, important personalities,
   landmark judgments or institutions whenever relevant.
-- The presentation much be necessarily catchy and cool and interesting include one relevant emoji at the end
+- The presentation much be necessarily catchy and cool and interesting include one relevant emoji at the very begining
 - Avoid textbook definitions and obvious facts.
 - Output ONLY the fact
 """
@@ -61,7 +61,7 @@ Rules:
 
 def send_fact(fact):
     url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
-    message = f"""\n\n👉 {fact}\n\n"""
+    message = f"""\n\n{fact}👈\n\n"""
     for chat_id in CHAT_IDS:
         response = requests.post(
             url,
