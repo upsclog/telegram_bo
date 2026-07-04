@@ -4,5 +4,4 @@ python-dotenv
 Pillow
 requests
 httpx
-os
-time
+
